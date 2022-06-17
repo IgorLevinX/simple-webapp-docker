@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 RUN apt-get update && apt-get install -y python python-pip python3 python3-pip
 
-RUN pip3 install flask 
+RUN pip3 install flask && pip3 uninstall markupsafe
 
 COPY app.py /opt/
 
