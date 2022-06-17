@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 RUN apt-get update && apt-get install -y python python-pip python3 python3-pip
 
-RUN pip3 install flask && pip3 uninstall -y markupsafe && pip3 install MarkupSafe==2.1.1
+RUN pip3 install flask && pip3 uninstall -y markupsafe && pip3 install --upgrade MarkupSafe==2.1.1
 
 COPY app.py /opt/
 
