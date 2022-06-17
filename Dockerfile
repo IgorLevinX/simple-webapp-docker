@@ -2,6 +2,7 @@ FROM ubuntu:16.04
 
 RUN apt-get update && apt-get install -y python3 python3-pip
 
+RUN pip3 uninstall MarkupSafe
 RUN pip3 install --no-cache-dir --upgrade MarkupSafe==2.1.1 Jinja2==3.1.2 Flask==2.1.2 
 
 COPY app.py /opt/
