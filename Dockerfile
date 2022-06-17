@@ -1,8 +1,8 @@
-FROM ubuntu:16.04
+FROM ubuntu:20.04
 
-RUN apt-get update && apt-get install -y python python-pip python3 python3-pip
+RUN apt-get update && apt-get install -y python3 python3-pip && apt-get clean all
 
-RUN pip3 install flask && pip3 uninstall -y markupsafe && pip3 install -vvv --upgrade MarkupSafe==2.1.1
+RUN pip3 install --no-cache-dir flask
 
 COPY app.py /opt/
 
