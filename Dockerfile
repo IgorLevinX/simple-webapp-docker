@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 RUN apt-get update && apt-get install -y python3 python3-pip
 
-RUN pip3 install Flask 
+RUN pip3 install Flask==2.1.2 
 
 COPY app.py /opt/
 
