@@ -1,11 +1,8 @@
 FROM ubuntu:16.04
 
-RUN apt-get update && apt-get install -y python3 python3-pip 
+RUN apt-get update && apt-get install -y python python-pip
 
-RUN pip3 install --upgrade setuptools
-# RUN pip3 install --upgrade pip
-# RUN pip3 install --no-cache-dir --upgrade MarkupSafe==2.1.1 Jinja2==3.1.2 Flask==2.1.2 
-RUN pip3 install Flask
+RUN pip install flask 
 
 COPY app.py /opt/
 
